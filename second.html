@@ -1,0 +1,143 @@
+<html>
+<head>
+  <title>Main Page</title>
+  <link rel = "stylesheet" href="second.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
+</head>
+<body onload = "myfunc()" >
+  <div id = "loading" ></div>
+  <div class = "navigationBar" onscroll="scrolling()" id = "nav">
+    <a href="second.html" ><img src = "SnowchildLogo.png"  class = "brandLogo"></a>
+    <b>
+    <ul class = "topNav" style="list-style-type: none;">
+      <li><a class = "material-icons" href = "#" id = "H" style="margin-right: 260px;"> home </a></li>
+      <li><a class = "material-icons" href = "#"> person_pin </a></li>
+      <li><a class = "material-icons" href = "#"> near_me </a></li>
+      <li><a class = "material-icons" href = "#"> nature </a></li>
+      <li><a class = "material-icons" href = "#"> landscape </a></li>
+      <li><a class = "material-icons" href = "#"> smartphone </a></li>
+    </ul>
+    <input type="button" class = "logOut" id = "out" value = "logout!"> 
+    </b>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+    <div class="search-container">
+         <div class="search-box">
+             <div class="search-icon"><i class="fa fa-search"></i></div>
+                 <input class="search-input" id="search" type="text" placeholder="Search Teachers..... "/>
+                          <ul class="search-results" id="results"></ul>
+           </div>
+     </div>
+  </div>
+<div class = "profilePic" style = "background-image: url('manan.jpg'); float: left;"></div>
+<div style="box-sizing: border-box; border: none; margin-left: 20%; margin-right: 20%;">
+  <div class = "wow" style="margin-top: 100px;">
+    <ul class = "NRTBoxes" style="box-sizing: border-box; padding-bottom: 15%;">
+      <p>
+        <div class = "profilePic" style=" background-image: url('manan.jpg'); float: left; height: 40px; width: 40px; margin: -3.4% 0 0 -1%;" >
+        </div>
+      </p> 
+    </ul>
+    <ul class = "RTBoxes">
+       
+    </ul>
+    <ul class = "RTBoxes" style="background-color: #0a69aa; color: white;">
+      <p>my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc  
+      </p>
+    </ul>
+    <ul class = "RTBoxes" style = "background-color: orange; color: white;">
+      <p>my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc  
+      </p>
+    </ul>
+    <ul class = "RTBoxes" style="background-color: green; color: white;">
+      <p>my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc  
+      </p>
+    </ul>
+    <ul class = "RTBoxes" style = "color: white; background-color: red;">
+      <p>my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
+        my name is MananTandon. CEO of tandon.inc  
+      </p>
+    </ul>
+  </div> 
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+
+
+
+<script>
+ 
+ var firebaseConfig = {
+    apiKey: "AIzaSyBd_48IwcnX9pc7wauERUwXejFpT18M8lU",
+    authDomain: "champagnepapi.firebaseapp.com",
+    projectId: "champagnepapi",
+    storageBucket: "champagnepapi.appspot.com",
+    messagingSenderId: "483159366132",
+    appId: "1:483159366132:web:c28187f013d620aaa681a1",
+    measurementId: "G-JCZT7HXLP9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  //make AUTH and FIRESTORE reference......
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  
+
+
+  db.settings({timestampsInSnapshots: true});
+
+
+</script>
+
+
+<script src="second.js"></script>
+<script src="manan.js"></script>
+<script>
+
+    var preloader = document.getElementById("loading")
+    function myfunc(){
+           preloader.style.display = "none";
+    }
+
+    var mt = document.getElementById("nav")
+    window.onscroll = function() {scroll()};
+    function scroll(){
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+        mt.style.borderBottom = "1px solid black";
+      }else{
+        mt.style.borderBottom = "none";
+      }
+        
+    }
+    
+</script>
+
+</body>
+</html>
