@@ -1,0 +1,364 @@
+
+body{
+    background-color: rgb(24,25,26);
+    font-family: Open Sans;
+    word-wrap: break-word;
+}
+*{
+  box-sizing: border-box;
+}
+#loading{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #f2f2f2 url("loading.gif") no-repeat center;
+  z-index: 99999;
+}
+.navigationBar{
+    overflow: hidden;
+    background-color: rgb(36,37,38);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    width: auto;
+    height: 65px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(60,61,62);
+    /* this below code is for giving shadow to the navigation bar */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.navigationBar::-webkit-scrollbar-track{
+  border-bottom: 1px solid black;
+}
+
+ul.topNav li{
+    float: right;
+    text-decoration: none;
+}
+
+ul.topNav li a{
+     display: inline;
+     text-decoration: none;
+     color: #0a69aa;
+     box-sizing: border-box;
+     padding-right: 40px;
+     padding-left: 40px;
+     padding-top: 16px;
+     padding-bottom: 22.5px;
+}
+
+ul.topNav li a:hover{
+    background: #0a69aa;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.brandLogo{
+    float: left;
+    width: 50px;  
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 7px; 
+}
+
+input.logOut{
+
+    color: white;
+    width: 130px;
+    padding: 12px;
+    border: 2px solid #0a69aa;
+    background: #0a69aa;
+    opacity: 0.85;
+    font-size: 18px;
+    text-decoration: bold;
+    line-height: 14px;
+    float: right;
+    margin-right: -60%;
+    margin-top: -0.4%;
+    border-radius: 15px;
+}
+
+input.logOut:hover{
+    background: #32cd32;
+    border: 2px solid #32cd32;
+    color: white;
+}
+button.blogSend{
+  color: white; 
+  box-sizing: border-box; 
+  border-radius: 10px; 
+  border: none; 
+  padding: 12px; 
+  width: 100%; 
+  background-color: #0a69aa; 
+  font-size: 100%;
+}
+button.blogSend:hover{
+  background: rgb(60,61,62);
+}
+
+
+
+/* search bar finally */ 
+  
+  /* ============================ */
+  /* VARIABLES                    */
+  /* ============================ */
+  /* ============================ */
+  /* SEARCH BAR                   */
+  /* ============================ */
+  .search-container {
+    margin-left: 75px ;
+    margin-top: -4px;
+    width: 350px;
+    
+  }
+  
+  .search-box {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 10px;
+    background-color: rgb(60,61,62);
+    height: 40px;
+    position: fixed;
+  }
+  
+  .search-icon {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 32px;
+    height: 40px;
+    color: #999;
+    font-size: 1.3em;
+    padding: 7px 15px;
+  }
+  
+  .search-input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 368px;
+    height: 40px;
+    float: right;
+    background-color: transparent;
+    border: 0px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: Open Sans;
+    font-size: 1em;
+    position: relative;
+    outline: 0px;
+  }
+  
+  @-webkit-keyframes fadeInTop {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-1.334em) translateZ(0);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes fadeInTop {
+    0% {
+      opacity: 0;
+      -moz-transform: translateY(-1.334em) translateZ(0);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeInTop {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-1.334em) translateZ(0);
+      -moz-transform: translateY(-1.334em) translateZ(0);
+      -ms-transform: translateY(-1.334em) translateZ(0);
+      -o-transform: translateY(-1.334em) translateZ(0);
+      transform: translateY(-1.334em) translateZ(0);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .search-results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 999;
+    width: 368px;
+    max-height: 200px;
+    overflow: scroll;
+    top: 40px;
+    left: 32px;
+    text-align: left;
+  }
+  .search-results li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 40px;
+    background-color: #9BC788;
+    color: white;
+    font-weight: bold;
+    /* ANIMATION */
+    /* remove this part if you dont like the animation */
+    /* END OF ANIMATION */
+  }
+  .search-results li:hover {
+    background-color: #87bc70;
+    cursor: pointer;
+  }
+  .search-results li:nth-child(1) {
+    /* Animation */
+    -webkit-animation: fadeInTop 0.4s 0s forwards;
+    animation: fadeInTop 0.4s 0s forwards;
+    opacity: 0;
+  }
+  .search-results li:nth-child(2) {
+    /* Animation */
+    -webkit-animation: fadeInTop 0.4s 0.1s forwards;
+    animation: fadeInTop 0.4s 0.1s forwards;
+    opacity: 0;
+  }
+  .search-results li:nth-child(3) {
+    /* Animation */
+    -webkit-animation: fadeInTop 0.4s 0.2s forwards;
+    animation: fadeInTop 0.4s 0.2s forwards;
+    opacity: 0;
+  }
+  .search-results li:nth-child(4) {
+    /* Animation */
+    -webkit-animation: fadeInTop 0.4s 0.3s forwards;
+    animation: fadeInTop 0.4s 0.3s forwards;
+    opacity: 0;
+  }
+  .search-results li:nth-child(5) {
+    /* Animation */
+    -webkit-animation: fadeInTop 0.4s 0.4s forwards;
+    animation: fadeInTop 0.4s 0.4s forwards;
+    opacity: 0;
+  }
+
+  /*material icons */
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+.c3bb{
+  float: left;
+  width: 33.33%;
+  height: 750px;
+  margin-top: 65px;
+  overflow: scroll;
+}
+#userBlog{
+  box-sizing: border-box;
+  border: 1px solid rgb(60,61,62);
+  border-radius: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 3% 3% 0 3%;
+  margin: 6px -7px 0 3px;
+  font-size: 110%;
+  outline: none;
+  background-color: rgb(60,61,62);
+  resize: none;
+  width: 100%;
+  color: white;
+}
+#userBlog::placeholder{
+  color: rgb(180,181,182);
+}
+
+.RTBoxes{
+    box-sizing: border-box;
+    margin: 0 auto 2% auto;
+    width: 590px;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgb(36,37,38);
+    padding: 20px;
+    /* box-shadow: 0 15px 8px 0 #0a69aa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.nrtBoxes, .Boxes{
+  box-sizing: border-box;
+  margin: 2% auto 2% auto;
+  width: 590px;
+  height: auto;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+}
+
+.profilePic {
+  box-sizing: border-box;
+  border: 1px solid rgb(36,37,38);
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  color: transparent;
+  transition: all .3s ease;
+}
+
+.profilePic:hover {
+    background-color: rgba(0,0,0,.5);
+    z-index: 10000;
+    color: rgba(250,250,250,1);
+    transition: all .3s ease;
+  }
+
+.myFriends{
+  color: rgb(170,171,172); 
+  box-sizing: border-box; 
+  padding: 0 0 0 100px;
+  margin: -16px 0 0 0;
+}
+
+#gre, #ree{
+  color: white;  
+  background-color: rgb(36,37,38);
+  border: 1px solid rgb(60,61,62) ;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  
+}
+
+#gre:hover{
+  background: green;
+}
+
+#ree:hover{
+  background: red;
+}
