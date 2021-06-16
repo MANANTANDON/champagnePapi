@@ -8,102 +8,64 @@
 </head>
 <body onload = "myfunc()" >
   <div id = "loading" ></div>
-  <div class = "navigationBar" onscroll="scrolling()" id = "nav">
+  <!-- navigation bar -->
+  <div class = "navigationBar" id = "nav">
     <a href="second.html" ><img src = "SnowchildLogo.png"  class = "brandLogo"></a>
     <ul class = "topNav" style="list-style-type: none;">
       <li><a class = "material-icons" href = "second.html" id = "H" style="margin-right: 370px; border-bottom: 2px solid #0a69aa" > home </a></li>
-      <li><a class = "material-icons" href = "#"> near_me </a></li>
-      <li><a class = "material-icons" href = "#"> nature </a></li>
-      <li><a class = "material-icons" href = "#"> landscape </a></li>
-      <li><a class = "material-icons" href = "#"> smartphone </a></li>
-      <!-- <li><a class = "material-icons" href = "#"> email </a></li> -->
+      <li><a class = "material-icons" href = "third.html"> account_circle</a></li>
     </ul>
     <input type="button" class = "logOut" id = "out" value = "logout!"> 
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
-    <div class="search-container">
-      <div class="search-box">
-             <div class="search-icon"><i class="fa fa-search"></i></div>
-                 <input class="search-input" id="search" type="text" placeholder="Search Teachers..... "/>
-                          <ul class="search-results" id="results"></ul>
-      </div>
-    </div>
+    <div style = "color: rgb(170,171,172); font-family: 'Open Sans';font-size: 30px; margin-left: 70px;">snow<span style = "color: white">Child</span></div>
   </div>
 <div>
+<!-- navigation bar end -->
   <!-- left Border Box -->
-  <div class = "c3bb" style = "width: 332px; color: orange;"> <!--c3bb = 3 columns of border box -->
-    <img class = "profilePic" style = "float: left; margin: 0px 66px 0px 66px;" id = 'DP'></img>
+  <div class = "c3bb" style = "width: 332px;"> <!--c3bb = 3 columns of border box -->
+    <img class = "profilePic" style = "float: left; margin: -5px 66px 0px 66px; border: 10px solid rgb(24,25,26);" id = 'DP'></img>
     <div id = "userDetails"></div>
   </div>
   <!-- Center Border Box -->
-  <div class = "c3bb" style = "width: 744px; color: red;" id = "centerColumn" >
-    <div class = "nrtBoxes" style="box-sizing: border-box; background-color: rgb(36,37,38); overflow: hidden;">
+  <div class = "c3bb" style = "width: 744px;" id = "centerColumn" >
+    <!-- non real time box -->
+    <div class = "nrtBoxes" >
       <p>
-        <img class = "profilePic" style="float: left; height: 40px; width: 40px; margin: -3.4% 0 0 -1%;" id = "dp" ></img>
+        <img class = "profilePic" style="float: left; height: 40px; width: 40px; margin: -3.4% 0 0 -1%;" id = "dp"  ></img>
         <div id = "FGk5"></div>
         <div id = "modalCreate">
          <form id = "cForm">
            <textarea id = "userBlog" cols = "40" rows = "5" placeholder="Whats on your mind !" onfocus="this.placeholder=''" onblur="this.placeholder='Whats on your mind !'" ></textarea>
-           <button class = "blogSend" style="margin: 10% -1% -3.4% -1%;">Chip !</button>
+           <input type = "file" onchange = 'chooseFile(event)' class = "ppp" id = "images">
+           <button class = "blogSend" >Chip !</button>
          </form>
        </div>
       </p>
     </div>
+    <!-- Non real time box end -->
+    <!-- Real time box start -->
     <div class = "centerConsole" >
-      <div class = "RTBoxes" id = "un"> </div>
-      <button class = "material-icons" id = "gre" onclick="turnGreen()" type = "submit"></button>
-      <button class = "material-icons" id = "ree" onclick="turnRed()"></button>
+      <div class = "RTBoxes" id = "un"> 
+      <button class = "like__btn"  id = "like">
+        <div class = "material-icons" style = "font-size: 12px;">favorite_border</div>
+        <span>Like</span>
+      </button>
     </div>
-    <div>
-      <!-- <ul class = "Boxes" style="background-color: #0a69aa; color: white;">
-        <p>my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc my name is MananTandon. 
-          CEO of tandon.inc my name is MananTandon. CEO of tandon.inc my name is MananTandon. 
-          CEO of tandon.inc my name is MananTandon. CEO of tandon.inc my name is MananTandon. 
-          CEO of tandon.inc my name is MananTandon. CEO of tandon.inc my name is MananTandon. 
-          CEO of tandon.inc my name is MananTandon. CEO of tandon.inc my name is MananTandon. 
-          CEO of tandon.inc my name is MananTandon. CEO of tandon.inc  
-        </p>
-      </ul>
-      <ul class = "Boxes" style = "background-color: orange; color: white;">
-        <p>my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc  
-        </p>
-      </ul>
-      <ul class = "Boxes" style="background-color: green; color: white;">
-        <p>my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc  
-        </p>
-      </ul>
-      <ul class = "Boxes" style = "color: white; background-color: red;">
-        <p>my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc my name is MananTandon. CEO of tandon.inc 
-          my name is MananTandon. CEO of tandon.inc  
-        </p>
-      </ul> -->
     </div>
+   <!-- Real time box start  End -->
   </div>
   <!-- Right Border Box -->
-  <div class = "c3bb" style="width: 348px; color: green;">
-    <div style = "border: 1px solid rgb(36,37,38)e; border-radius: 10px; background-color: rgb(36,37,38); padding: 10px; margin: 10px;">
-      <div class = "material-icons" style = "color: rgb(170,171,172) ">person_pin</div><div style = "color: rgb(170,171,172); font-size: 25px; font-family: 'Lucida Grande'; margin: 0 0 0 2px; " class = "material-icons" > Friends: </div>
+  <div class = "c3bb" style="width: 348px;">
+    <div class = "fBox">
+      <div class = "material-icons" style = "color: rgb(170,171,172) ">person_pin</div><span class = "friends"> Friends: </span>
      <div class = "friendsConsole">
 
      </div>
     </div>
   </div>
 </div>
-<!-- <div class = "userInfo" style = "box-sizing: border-box; border: 10px solid black; width: 10%;">kjdbfkbsdjgbjksd</div> -->
+
+<!-- Firebase initilisation -->
+
 
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
@@ -149,38 +111,7 @@
     var preloader = document.getElementById("loading")
     function myfunc(){
            preloader.style.display = "none";
-    }
-
-    var mt = document.getElementById("nav")
-    var up = document.getElementById("centerColumn")
-    window.onscroll = function() {scroll()};
-    function scroll(){
-      if (up > 20 ){
-       mt.style.borderBottom = "1px solid grey";
-      }else{
-        mt.style.borderBottom = "none";
-      }
-        
-    }
-
-    var g = document.getElementById("gre")
-    var gUp = 0;
-    function turnGreen(){
-      g.style.color = "green";
-      g.addEventListener('submit', () => {
-          gUp += 1;
-          console.log(gUp);
-      })
-      console.log(gUp);
-    }
-    
-    
-    var r = document.getElementById('ree')
-    function turnRed(){
-      r.style.color = "red";
-    }
-    
-    
+    }    
 </script>
 
 </body>

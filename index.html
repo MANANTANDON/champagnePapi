@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Teacher</title>
+  <title>SnowChild</title>
   <link rel = "stylesheet" href="style.css" type="text/css">
 
 </head>
@@ -8,38 +8,37 @@
   <div id = "loading"></div>
 <div>
     <img class = "sc_logo" src="Snowchild.png" alt="snowchild" width="350px" height="86px" >
-    <p class = "mc56" style="font-family: Open Sans;">One Stop destination for all teachers around<br>the world.......</p>
+    <p class = "mc56">One Stop destination for all the Users around<br>the world.......</p>
 </div>
+<!-- Sigin Form -->
 <div class = "theBox">
-  <h2 style=" text-align: center; font-family: Open Sans; "> SnowChild </h2>
-    <form  action="index.html" method="post" id = "loginForm">
+  <h2 style=" text-align: center; font-family: 'Open Sans';" > SnowChild </h2>
+  <!--sign in form start-->
+    <form method="post" id = "loginForm">
       <div class="col">
-         <input type="text" name="username" placeholder="Username" required class = "user" id = "signInEmail">
-         <input type="password" name="password" placeholder="Password" required class = "pass" id = "signInPassword" onclick="backtoBasic()">
-         <button type="submit" style="color: white; border: none; background-color: #0a69aa; cursor: pointer; font-family: Open Sans;" class = "signIn" id = "signInButton">Sign In ! </button>
-         <!-- <div class="loader"></div> -->
-         <div class = "hg23">
-           <a href="https://www.apple.com"><center>Forgotten password ?</center></a>
-        </div>
-        <hr>
-        
-          <input class = "cna" type="button" value="Create New Account !" style=" font-family: Open Sans; position: auto; border: none; background-color: orange; width: 100%; border-radius: 10px; cursor: pointer;" onclick="document.getElementById('ck78').style.display='block'" style="width:auto;">
-        
-       </div>
-     </form>
+        <input type="text" name="username" placeholder="Username" required class = "user" id = "signInEmail">
+        <input type="password" name="password" placeholder="Password" required class = "pass" id = "signInPassword" onclick="backtoBasic()">
+        <button type="submit" class = "signIn" id = "signInButton">Sign In ! </button>
+        <hr> 
+        <input type="button" class = "cna" value="Create New Account !"  onclick="document.getElementById('ck78').style.display='block'" >
+      </div>
+    </form>
+     <!--sign in form End-->
 </div>
+<!-- SignIn Form End -->
+
 <!--  Signp Form  -->
 <div id = "ck78" class = "reg">
   <form class = "SignupForm"  method = "POST" id = "signUpForm">
     <div class="container">
       <h1 style="font-family: Open Sans;">Sign up</h1>
-      <span onclick="document.getElementById('ck78').style.display='none'" class="close">&times;</span>
       <h6 style="color: grey; font-family: Open Sans; margin-top: -20px;">in less than 2 min if you are a fast typist... ;)</h6>
       <hr>
-      <input type="text" placeholder="First_name" name="fname"  class = "xxx" id="firstName">
-      <input type="text" placeholder="Surname" name="sname"  class = "yyy" id="surname">
-      <input type="email" placeholder="Mobile number or placeholder" name="ID" required class = "eee" id="signUpEmail">
+      <input type="text" placeholder="Name" name="fname"  class = "xxx" id="firstName" required >
+      <input type="text" placeholder="lastName" name="sname"  class = "yyy" id="surname" required >
+      <input type="email" placeholder="email" name="ID" required class = "eee" id="signUpEmail"> <!-- <string>@<string>.com -->
       <input type="password" placeholder="New password" name="psw" required class = "ppp" id="signUpPassword">
+      <input type="text" placeholder = "location" name="loc" required class = "lll" id="location">
       <p style="font-family: Open Sans; margin-bottom: 1px;">Date of birth:</p>
     <div class = "customSelect">
       <select class = "date" id = 'dd'>
@@ -73,33 +72,37 @@
       <label for="test1" style="font-family: Open Sans; font-size: 15px;">Male</label>
     </div>
     <div class = "mans">
-      <input type="radio" id="test2" name="radio-group"checked>
+      <input type="radio" id="test1" name="radio-group"checked>
       <label for="test2" style="font-family: Open Sans; font-size: 15px;">Female</label>
    </div>
    <div class = "mans">
-     <input type="radio" id="test3" name="radio-group">
+     <input type="radio" id="test1" name="radio-group">
      <label for="test3" style="font-family: Open Sans; font-size: 15px;">Other</label>
   </div>
  </div>
  <div id = "DP">
-   <p style="font-family: Open Sans; margin-bottom: 1px;">Profile Image:</p>
+   <p style="font-family: Open Sans; margin-bottom: 1px;"><b>Profile Image:</b><h6 style="color: grey; font-family: Open Sans; margin: -4px 0 0 0;">( less than 100kb )</h6></p>
    <input type = "file" onchange = 'chooseFile(event)' class = "ppp" >
  </div>
-    <br><br><br><br>
+    <br>
       <button type="submit" class = "aba" >SignUp</button>
-        <input type="checkbox" name="remember" class = "zzz"> Remember me
+      <hr style = "border: 1px solid rgb(60,61,62);">  
+      <div style = "font-family: 'Open Sans'; font-size: 15px;"> 2021</div>
 </div>
+<!-- SignUp Form Ended-->
+<!-- Footer start -->
 <div>
   <footer>
     <div class = "mn99">
-      Manan Tandon and SnowChild 2021 copyright all rights reserved and contained in the name of mananTandon
+      Manan,Suman,Ankit and SnowChild 2021 copyright all rights reserved and contained in the name of MSA.
       <hr>
       Snowchild name has been taken from TheWeeknds song from his 6th studio album After Hours. it is an amazing and dark album, it tells about the how a man feels when his feelings are broken and its leads to break up, TheWeeknd remorse first that i am Alone Again
       but he relises that its way Too Late for him to get back and he tells himself that he has been the Hardest To Love and he is now Scared To Live again, he gets remined of his time when he started singing at the age of 16 he has no home and no place but only
       his voice and lyrics which made him the man he is now,
     </div>
  </footer>
-
+<!-- Footer End -->
+<!-- Java Script/ Firebase initilized -->
  <script>
 
  var modal = document.getElementById('ck78')
@@ -148,20 +151,16 @@
 <script src = "manan.js"></script>
 <script src = "second.js"></script>
 
-<script>
-  
+<script> 
    var preloader = document.getElementById("loading");
    function myfunc(){
      preloader.style.display = "none";
    }
-
    var back = document.getElementById("signInPassword");
    function backtoBasic(){
      back.style.border = "1px solid grey";
    }
-
 </script>
-
-
+<!-- Java Script End -->
 </body>
 </html>

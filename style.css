@@ -22,26 +22,24 @@ body{
   margin-left: 120px;
   margin-top: 4px;
   font-size: 27px;
+  font-family: 'Open Sans';
 }
 .theBox{
     box-sizing: border-box;
-    margin-left: 750px;
-    margin-top: -185px;
-    margin-right: 100px;
-    border-radius: 10px;
+    margin: -185px 100px 0 750px;
+    border-radius: 10px; 
     background-color: white;
     padding: 10px 0 20px 0;
     height: 376px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-family: Open Sans;
+    font-family: 'Open Sans';
 }
 .col {
-  float: left;
   width: 100%;
   margin: auto;
   padding: 0 38.5px;
   margin-top: 6px;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
 }
 .close{
   position: absolute;
@@ -55,7 +53,7 @@ body{
   color: #0a69aa;
   cursor: pointer;
 }
-input.user,.pass,.cna{
+input.user,.pass{
   width: 100%;
   padding: 12px;
   border: 1px solid grey;
@@ -72,7 +70,6 @@ input.user,.pass,.cna{
 button.signIn{
   width: 100%;
   padding: 12px;
-  border: 1px solid grey;
   border-radius: 4px;
   margin: 5px 0;
   opacity: 0.85;
@@ -80,22 +77,37 @@ button.signIn{
   font-size: 17px;
   line-height: 20px;
   border-radius: 10px;
-
+  color: white; 
+  border: none; 
+  background-color: #0a69aa; 
+  cursor: pointer; 
+  font-family: "Open Sans";
 }
 
-/* .loader {
-  border: 16px solid #f3f3f3; 
-  border-top: 16px solid #3498db;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
+button.signIn:hover{
+  background-color: #0e80cc;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-} */
+input.cna{
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  border-radius: 10px;
+  border: none; 
+  background: orange; 
+  cursor: pointer; 
+  font-family: "Open Sans";
+  color: black;
+}
+
+input.cna:hover{
+  background: rgb(246, 192, 90); 
+}
 
 a:link{
   color: #0a69aa;
@@ -148,14 +160,16 @@ input.xxx,.yyy{
   border: 1px solid grey;
   border-radius: 12px;
   font-size: 17px;
+  outline: none;
 }
-input.eee,.ppp{
+input.eee,.ppp,.lll{
   width: 99.3%;
   padding: 12px;
   border: 1px solid grey;
   border-radius: 12px;
   font-size: 17px;
   margin-top: 7px;
+  outline: none;
 }
 select{
      width: 32.5%;
@@ -172,13 +186,12 @@ select{
      -webkit-appearance: none;
      -moz-appearance: none;
      appearance: none;
-     background-image: url("arrow2.png")
+     background-image: url("arrow2.png");
+     outline: none;
 }
 
-
-
-
-[type="radio"]:checked,
+/* radio button  codepen.io */
+[type="radio"]:checked, 
 [type="radio"]:not(:checked) {
     position: absolute;
     left: -9999px
@@ -228,6 +241,9 @@ select{
     -webkit-transform: scale(1);
     transform: scale(1);
 }
+
+/*radio button end */ 
+
 .mans{
   box-sizing: border-box;
   border: 1px solid grey;
@@ -247,6 +263,7 @@ select{
   width: 100%;
   height: 8%;
   margin-bottom: 10px;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 18px;
+  resize: none;
 }
